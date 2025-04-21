@@ -1,0 +1,13 @@
+{
+  "name": "loopstudios",
+  "version": "1.0.0",
+  "description": "![Design preview for the loopstudios](./design/desktop-design.jpg)",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss:./assets/css/main.css"
+  },
+  "author": "ilya yudin",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.86.0"
+  }
+}
