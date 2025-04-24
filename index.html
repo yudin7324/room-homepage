@@ -18,6 +18,7 @@
     <header class="header">
       <div class="container">
         <div class="header__wrap">
+          <button class="js-burger header__burger" type="button" aria-label="menu button"></button>
           <figure class="header__logo">
             <img src="./assets/images/logo.svg" alt="logo">
           </figure>
@@ -39,7 +40,6 @@
               </ul>
             </div>
           </nav>
-          <button class="js-burger header__burger" type="button" aria-label="menu button"></button>
         </div>
       </div>
     </header>
@@ -48,9 +48,15 @@
     <section class="hero">
       <div class="hero__wrap">
         <div class="hero__slider">
-          <figure class="hero__img">
-            <img src="./assets/images/desktop-image-hero-1.jpg" alt="hero image">
-          </figure>
+          <div class="hero__slider-wrap">
+            <figure class="hero__img">
+              <img src="./assets/images/desktop-image-hero-1.jpg" alt="hero image">
+            </figure>
+          </div>
+          <div class="hero__btns">
+            <button class="hero__btn hero__btn--prev" type="button" aria-label="prev button"></button>
+            <button class="hero__btn hero__btn--next" type="button" aria-label="prev button"></button>
+          </div>
         </div>
         <div class="hero__content">
           <h1 class="hero__title">Discover innovative ways to decorate</h1>
