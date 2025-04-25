@@ -1,0 +1,22 @@
+.about {
+  
+  &__wrap {
+    display: flex;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.37;
+    letter-spacing: 0.42em;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.37;
+    letter-spacing: -0.02em;
+    margin-top: 16px;
+    color: var(--color-dark-gray);
+  }
+}
