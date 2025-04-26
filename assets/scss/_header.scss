@@ -9,6 +9,10 @@
   @media (min-width: 991px) {
     padding-top: 64px;
   }
+
+  .container {
+    max-width: none;
+  }
   
   &__wrap {
     position: relative;

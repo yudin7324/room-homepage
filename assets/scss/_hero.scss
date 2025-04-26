@@ -1,21 +1,39 @@
 .hero {
 
-
+  overflow: hidden;
   &__wrap {
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 66vh;
+    
+    height: 100%;
 
     @media (min-width: 768px) {
       grid-template-columns: 58% 1fr;
+      grid-template-rows: 100%;
     }
   }
 
   &__slider {
     position: relative;
+    min-height: 360px;
     
     &-wrap {
       height: 100%;
+    }
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
     }
   }
 
@@ -35,7 +53,11 @@
     padding: 60px 32px 72px 32px;
 
     @media (min-width: 991px) {
-      padding: 120px 16.66%;
+      padding: 80px 50px;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 120px 100px;
     }
   }
 
@@ -59,10 +81,17 @@
     height: 56px;
     width: 56px;
     background-color: var(--color-black);
+    transition: background-color 0.3s ease-in-out;
 
-    @media (min-width: 768px) {
+    @media (min-width: 991px) {
       height: 80px;
       width: 80px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #444444;
+      }
     }
 
     &:after {

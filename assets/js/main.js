@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     NAV: '.js-nav',
     BURGER: '.js-burger',
     BODY: 'body',
+    SLIDER: '.js-slider',
+    SLIDE: '.js-slide',
+    PREV_BTN: '.js-prev-btn',
+    NEXT_BTN: '.js-next-btn',
   };
   const classes = {
     ACTIVE: 'active',
@@ -30,4 +34,30 @@ document.addEventListener('DOMContentLoaded', () => {
       body.classList.add(classes.NO_SCROLL);
     }
   }
+
+  function initSlider() {
+    const slides = document.querySelectorAll('.js-slide');
+    const prevBtn = document.querySelector('.js-prev-btn');
+    const nextBtn = document.querySelector('.js-next-btn');
+    let currentIndex = 0;
+
+    function updateSlides() {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlides();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlides();
+    });
+  }
+
+  initSlider();
+
 });

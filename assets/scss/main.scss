@@ -6,8 +6,18 @@
 
 .main {
   color: var(--color-black);
-  height: 100%;
   background-color: var(--color-white);
+  flex-grow: 1;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      grid-template-rows: minmax(534px, auto) minmax(266px, auto);
+    }
+  }
 }
 
 .container {
@@ -21,7 +31,7 @@
   }
 
   @media (min-width: 991px) {
-    padding: 0 55px;
+    padding: 0 60px;
   }
 }
 
