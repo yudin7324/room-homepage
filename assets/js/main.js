@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     BODY: 'body',
     SLIDER: '.js-slider',
     SLIDE: '.js-slide',
+    CONTENT_SLIDE: '.js-content-slide',
     PREV_BTN: '.js-prev-btn',
     NEXT_BTN: '.js-next-btn',
   };
@@ -36,15 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function initSlider() {
-    const slides = document.querySelectorAll('.js-slide');
-    const prevBtn = document.querySelector('.js-prev-btn');
-    const nextBtn = document.querySelector('.js-next-btn');
+    const slides = document.querySelectorAll(selectors.SLIDE);
+    const contentSlides = document.querySelectorAll(selectors.CONTENT_SLIDE);
+    const prevBtn = document.querySelector(selectors.PREV_BTN);
+    const nextBtn = document.querySelector(selectors.NEXT_BTN);
     let currentIndex = 0;
 
     function updateSlides() {
       slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentIndex);
+        slide.classList.toggle(classes.ACTIVE, i === currentIndex);
       });
+
+      contentSlides.forEach((cSlide, i) =>
+        cSlide.classList.toggle(classes.ACTIVE, i === currentIndex)
+      );
     }
 
     prevBtn.addEventListener('click', () => {
