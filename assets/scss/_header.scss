@@ -71,10 +71,6 @@
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
 
-    &.active {
-      transform: translateX(0%);
-    }
-
     @media (min-width: 768px) {
       position: static;
       display: block;
@@ -87,6 +83,25 @@
         padding: 0;
         margin: 0;
         max-width: auto;
+      }
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
+
+    &-backdrop {
+      position: absolute;
+      left: 0;
+      background: var(--color-black);
+      opacity: 0.5;
+      width: 100%;
+      top: 100%;
+      height: 100vh;
+      z-index: 0;
+
+      @media (min-width: 768px) {
+        display: none;
       }
     }
 

@@ -13,6 +13,7 @@
 
   &__content {
     padding: 49px 32px 41px 32px;
+    grid-area: 3 / 2 / 3 / 4;
 
     @media (min-width: 768px) {
       padding: 68px 48px 58px 48px;
@@ -40,8 +41,11 @@
   }
 
   &__img {
-    height: 100%;
     width: 100%;
+    
+    @media (min-width: 768px) {
+      height: 100%;
+    }
 
     img {
       object-fit: cover;

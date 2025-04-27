@@ -10,12 +10,21 @@
   flex-grow: 1;
 
   &__content {
-    display: grid;
-    grid-template-columns: 1fr;
     height: 100%;
 
     @media (min-width: 768px) {
-      grid-template-rows: minmax(534px, auto) minmax(266px, auto);
+      display: grid;
+      grid-template-columns: 29.16vw 29.16vw 112px 1fr;
+      grid-template-rows: minmax(534px, auto) 56px minmax(266px, auto);
+    }
+
+    @media (min-width: 991px) {
+      grid-template-columns: 29.16vw 29.16vw 160px 1fr;
+      grid-template-rows: minmax(534px, auto) 80px minmax(266px, auto);
+    }
+
+    @media (min-width: 1280px) {
+      grid-template-columns: 29.16vw 29.16vw 160px 1fr;
     }
   }
 }
