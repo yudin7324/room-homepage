@@ -462,13 +462,13 @@ h1, h2, h3, h4, h5, h6, p {
   .main__content {
     display: grid;
     grid-template-columns: 29.16vw 29.16vw 112px 1fr;
-    grid-template-rows: minmax(534px, auto) 56px minmax(266px, auto);
+    grid-template-rows: minmax(calc(66.75% - 56px), auto) 56px minmax(33.25%, auto);
   }
 }
 @media (min-width: 991px) {
   .main__content {
     grid-template-columns: 29.16vw 29.16vw 160px 1fr;
-    grid-template-rows: minmax(534px, auto) 80px minmax(266px, auto);
+    grid-template-rows: minmax(calc(66.75% - 80px), auto) 80px minmax(33.25%, auto);
   }
 }
 @media (min-width: 1280px) {
